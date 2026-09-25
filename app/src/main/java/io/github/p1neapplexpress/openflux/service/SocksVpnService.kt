@@ -112,7 +112,6 @@ class SocksVpnService : android.net.VpnService() {
                 if (id != lastNetworkId) {
                     Logx.i(TAG, "network changed: $lastNetworkId -> $id")
                     lastNetworkId = id
-                    if (supervisor.isRunning) supervisor.forceRestart()
                 }
             }
 
